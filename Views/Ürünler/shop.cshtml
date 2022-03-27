@@ -1,0 +1,257 @@
+@using aviato.Models.DB
+@model IEnumerable<Product>
+
+
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+	<title>Goggles Ecommerce Category Bootstrap responsive Web Template | Shop :: w3layouts</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="Goggles a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<link href="/card/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="/card/css/style6.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="/card/css/shop.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="/card/css/jquery-ui1.css">
+	<link href="/card/css/style.css" rel='stylesheet' type='text/css' />
+
+
+<!-- filter -->
+	<link href="/filter-style.css" rel='stylesheet' type='text/css' />
+    <script src="/filter-style.js"></script>
+
+</head>
+
+<body>
+
+
+	</header>
+	<!--/shop-->
+	<section class="banner-bottom-wthreelayouts py-lg-5 py-3">
+		<div class="container-fluid">
+				<!-- product left -->
+				<div class="side-bar col-lg-3">
+					<div class="search-hotel">
+						@using (Html.BeginForm("shop", "Ürünler", FormMethod.Get))
+						{
+							<b>Search: @Html.TextBox("p")</b>
+							<input type="submit" value="search" />
+							<div class="clearfix"> </div>
+						}
+					</div>
+				</div>
+				<!--/product right-->
+				<div class="left-ads-display col-lg-9">
+					<div class="wrapper_top_shop">
+						<div class="row">
+							<div class="col-md-6 shop_left">
+								<img src="/card/images/banner3.jpg" alt="">
+								<h6>40% off</h6>
+							</div>
+							<div class="col-md-6 shop_right">
+								<img src="/card/images/banner4.jpg" alt="">
+								<h6>50% off</h6>
+							</div>
+
+						</div>
+						<div class="row">
+							<!-- /shop -->
+							@if (Model != null)
+							{
+								foreach (var item in Model)
+								{
+									<div class="col-md-3 product-men women_two shop-gd">
+										<div class="product-googles-info googles">
+
+											<div class="men-pro-item">
+												<div class="men-thumb-item">
+													<img src="@item.Image" class="img-fluid" alt="">
+													<div class="men-cart-pro">
+														<div class="inner-men-cart-pro">
+															<a href="/Ürünler/shopdetail/@item.Id"
+														class="link-product-add-cart">Quick View</a>
+														</div>
+													</div>
+													<span class="product-new-top">New</span>
+												</div>
+												<div class="item-info-product">
+													<div class="info-product-price">
+														<div class="grid_meta">
+															<div class="product_price">
+																<h4>
+																	<a href="single.html">@item.ProductName</a>
+																</h4>
+																<div class="grid-price mt-2">
+																	<span class="money ">@item.Price</span>
+																</div>
+															</div>
+															<ul class="stars">
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star" aria-hidden="true"></i>
+																	</a>
+																</li>
+																<li>
+																	<a href="#">
+																		<i class="fa fa-star-half-o" aria-hidden="true"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+														<div class="googles single-item hvr-outline-out">
+															<form action="#" method="post">
+																<input type="hidden" name="cmd" value="_cart">
+																<input type="hidden" name="add" value="@item.Id">
+																<input type="hidden" name="googles_item"
+															value="@item.ProductName">
+																<input type="hidden" name="amount" value="@item.Price">
+																<button type="submit" class="googles-cart pgoogles-cart">
+																	<i class="fas fa-cart-plus"></i>
+																</button>
+															</form>
+
+														</div>
+													</div>
+													<div class="clearfix"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								}
+							}
+						</div>
+					</div>
+	</section>
+
+
+
+	<footer class="bg-dark" id="tempaltemo_footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-4 pt-5">
+					<h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+					<ul class="list-unstyled text-light footer-link-list">
+						<li>
+							<i class="fas fa-map-marker-alt fa-fw"></i>
+							Zeytinburnu/İstanbul
+						</li>
+						<li>
+							<i class="fa fa-phone fa-fw"></i>
+							<a class="text-decoration-none" href="tel:010-020-0340">0506 130 2049</a>
+						</li>
+						<li>
+							<i class="fa fa-envelope fa-fw"></i>
+							<a class="text-decoration-none"
+								href="mailto:info@company.com">bariisatalay@outlook.com.tr</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 pt-5">
+					<h2 class="h2 text-light border-bottom pb-3 border-light">Shop</h2>
+					<ul class="list-unstyled text-light footer-link-list">
+						<li><a class="text-decoration-none" href="#">Luxury</a></li>
+						<li><a class="text-decoration-none" href="#">Sport Wear</a></li>
+						<li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
+						<li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
+						<li><a class="text-decoration-none" href="#">Popular Dress</a></li>
+						<li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
+						<li><a class="text-decoration-none" href="#">Sport Shoes</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-4 pt-5">
+					<h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+					<ul class="list-unstyled text-light footer-link-list">
+						<li><a class="text-decoration-none" href="#">Home</a></li>
+						<li><a class="text-decoration-none" href="#">Hakkımızda</a></li>
+						<li><a class="text-decoration-none" href="#">Adresimiz</a></li>
+						<li><a class="text-decoration-none" href="#">İletişim</a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="row text-light mb-4">
+				<div class="col-12 mb-3">
+					<div class="w-100 my-3 border-top border-light"></div>
+				</div>
+				<div class="col-auto me-auto">
+					<ul class="list-inline text-left footer-icons">
+						<li class="list-inline-item border border-light rounded-circle text-center">
+							<a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
+									class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+						</li>
+						<li class="list-inline-item border border-light rounded-circle text-center">
+							<a class="text-light text-decoration-none" target="_blank"
+								href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+						</li>
+						<li class="list-inline-item border border-light rounded-circle text-center">
+							<a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
+									class="fab fa-twitter fa-lg fa-fw"></i></a>
+						</li>
+						<li class="list-inline-item border border-light rounded-circle text-center">
+							<a class="text-light text-decoration-none" target="_blank"
+								href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-auto">
+					<label class="sr-only" for="subscribeEmail">Email address</label>
+					<div class="input-group mb-2">
+						<input type="text" class="form-control bg-dark border-light" id="subscribeEmail"
+							placeholder="Email address">
+						<div class="input-group-text btn-success text-light">Subscribe</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="w-100 bg-black py-3">
+			<div class="container">
+				<div class="row pt-2">
+					<div class="col-12">
+						<p class="text-left text-light">
+							Copyright &copy; 2021 Company Name
+							| Designed by <a rel="sponsored" href="https://templatemo.com"
+								target="_blank">TemplateMo</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+	<!-- End Footer -->
+
+</body>
+
+</html>

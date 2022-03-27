@@ -1,0 +1,334 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400,700);
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f1f1f1;
+	font-family: 'Karla', sans-serif;
+    color: #333;}
+
+/* Header */
+header {
+	background-color: #333333;
+	margin: 0 0 40px 0;
+	padding: 10px 0 0 0;
+	min-height: 50px;
+	text-align: center;}
+
+h1 {
+  background-image: url('../img/creative-folk.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 10px auto 5px auto;
+  width: 516px;
+  height: 21px;
+  text-align: center;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;}
+
+h2 {
+	font-size: 180%;
+	margin: 0;}
+h2, h4 {
+	font-weight: normal;}
+h4 {
+	color: #333;
+	display: inline-block;
+	font-size: 120%;
+	margin: 5px 0 5px 0;}
+
+/* Filter and search options */
+#price-range {
+	width: 370px;
+	margin: 10px auto 30px auto;
+	text-align: center;
+	font-weight: bold;}
+#value-min, #value-max {
+	width: 100px; 
+	border: none; 	
+	background-color: #f1f1f1;
+	font-family: 'Karla', sans-serif;}
+#slider {margin: 30px 0 30px 0;}
+/* Filter and search options */
+#buttons, #search {
+	text-align: center;
+	margin-bottom: 30px;}
+
+/* Filter buttons */
+button {
+	background-color: #d7d7d7;
+	border: none;
+	padding: 3px 10px 4px 10px;
+	border-radius: 4px;
+	color: #333;
+	font-family: 'Karla', sans-serif;
+	font-size: 100%;}
+
+button:hover, button.active {
+	background-color: #00cccc;
+	color: #fff;
+	cursor: pointer;}
+
+
+/* Search input */
+input {
+	font-size: 120%;
+	border: 1px solid #999;
+	padding: 5px;}
+input:hover {
+	border: 1px solid #666;}
+input:focus {
+	border: 1px solid #00cccc;
+	outline: none;}
+
+
+/* Gallery of images */
+#gallery {
+	text-align: center;
+	max-width: 1020px;
+	margin: 0 auto;}
+
+#gallery img {
+	width: 300px;
+	height: 150px;
+	border-radius: 3px;
+	border: 8px solid #fff;
+	margin: 6px;
+    -webkit-box-shadow: 0 0 3px 3px #ebebeb;
+    box-shadow: 0 0 3px 3px #ebebeb;
+	float: left;}
+
+
+/* Table styles */
+table {
+	margin: 0 auto;
+	width: 780px;}
+table#rates	{width: 380px;}
+th, td {
+	border-radius: 3px;
+	color: #333;
+	padding: 7px 10px 5px 10px;
+	min-width: 9em;
+	text-align: left;}
+th {
+	background-color: #d7d7d7;
+	font-weight: bold;
+	text-transform: uppercase;}
+td {
+	background-color: #fff;}
+table.sortable th:hover {
+	cursor: pointer;}
+th.ascending, th.descending, table.sortable th:hover {
+	background-color: #00cccc;
+	color: #fff;}
+
+/* Arrows for table sorting */
+th.ascending:after {
+	font-size: 60%;
+    content: '\25B2';
+    float: left;
+	padding: 4px 5px 0 0;}
+th.descending:after {
+	font-size: 60%;
+    content: '\25BC';
+    float: left;
+	padding: 4px 5px 0 0;}
+
+.about {
+	width: 780px;
+	margin: 0 auto 40px auto;}
+.about:after {
+  content: "";
+  display: table;
+  clear: both;}
+.about h2 {
+  text-align: left; 
+  float: left;}
+
+.bio {
+	float: right;
+	width: 195px;}
+.bio img {
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;}
+
+.location {
+	padding-left: 74px;
+	background-image: url('../img/pointer.png');
+	background-repeat: no-repeat;
+	background-position: 60px 1px;
+	font-size: 90%;}
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-ms-touch-action: none;
+-ms-user-select: none;
+-moz-user-select: none;
+-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.noUi-base {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.noUi-origin {
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+.noUi-handle {
+	position: relative;
+	z-index: 1;
+}
+.noUi-stacking .noUi-handle {
+/* This class is applied to the lower origin when
+   its values is > 50%. */
+	z-index: 10;
+}
+.noUi-stacking + .noUi-origin {
+/* Fix stacking order in IE7, which incorrectly
+   creates a new context for the origins. */
+	*z-index: -1;
+}
+.noUi-state-tap .noUi-origin {
+-webkit-transition: left 0.3s, top 0.3s;
+	transition: left 0.3s, top 0.3s;
+}
+.noUi-state-drag * {
+	cursor: inherit !important;
+}
+
+/* Slider size and handle placement;
+ */
+.noUi-horizontal {
+	height: 18px;
+}
+.noUi-horizontal .noUi-handle {
+	width: 34px;
+	height: 28px;
+	left: -17px;
+	top: -6px;
+}
+.noUi-horizontal.noUi-extended {
+	padding: 0 15px;
+}
+.noUi-horizontal.noUi-extended .noUi-origin  {
+	right: -15px;
+}
+.noUi-vertical {
+	width: 18px;
+}
+.noUi-vertical .noUi-handle {
+	width: 28px;
+	height: 34px;
+	left: -6px;
+	top: -17px;
+}
+.noUi-vertical.noUi-extended {
+	padding: 15px 0;
+}
+.noUi-vertical.noUi-extended .noUi-origin  {
+	bottom: -15px;
+}
+
+/* Styling;
+ */
+.noUi-background {
+	background: #FAFAFA;
+	box-shadow: inset 0 1px 1px #f0f0f0;
+}
+.noUi-connect {
+	background: #3FB8AF;
+	box-shadow: inset 0 0 3px rgba(51,51,51,0.45);
+-webkit-transition: background 450ms;
+	transition: background 450ms;
+}
+.noUi-origin {
+	border-radius: 2px;
+}
+.noUi-target {
+	border-radius: 4px;
+	border: 1px solid #D3D3D3;
+	box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+}
+.noUi-target.noUi-connect {
+	box-shadow: inset 0 0 3px rgba(51,51,51,0.45), 0 3px 6px -5px #BBB;
+}
+
+/* Handles and cursors;
+ */
+.noUi-dragable {
+	cursor: w-resize;
+}
+.noUi-vertical .noUi-dragable {
+	cursor: n-resize;
+}
+.noUi-handle {
+	border: 1px solid #D9D9D9;
+	border-radius: 3px;
+	background: #FFF;
+	cursor: default;
+	box-shadow: inset 0 0 1px #FFF,
+				inset 0 1px 7px #EBEBEB,
+				0 3px 6px -3px #BBB;
+}
+.noUi-active {
+	box-shadow: inset 0 0 1px #FFF,
+				inset 0 1px 7px #DDD,
+				0 3px 6px -3px #BBB;
+}
+
+/* Handle stripes;
+ */
+.noUi-handle:before,
+.noUi-handle:after {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 14px;
+	width: 1px;
+	background: #E8E7E6;
+	left: 14px;
+	top: 6px;
+}
+.noUi-handle:after {
+	left: 17px;
+}
+.noUi-vertical .noUi-handle:before,
+.noUi-vertical .noUi-handle:after {
+	width: 14px;
+	height: 1px;
+	left: 6px;
+	top: 14px;
+}
+.noUi-vertical .noUi-handle:after {
+	top: 17px;
+}
+
+/* Disabled state;
+ */
+[disabled].noUi-connect,
+[disabled] .noUi-connect {
+	background: #B8B8B8;
+}
+[disabled] .noUi-handle {
+	cursor: not-allowed;
+}
+
+/* Blocked state;
+ */
+.noUi-state-blocked.noUi-connect,
+.noUi-state-blocked .noUi-connect {
+	background: #4FDACF;
+}
