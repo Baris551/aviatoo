@@ -16340,8 +16340,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\OneDrive\\Masaüstü\\Eticaret\\aviato\\Views\\Ürünler\\Checkout.cshtml",
-      "TargetPath": "Views\\Ürünler\\Checkout.cshtml",
+      "FilePath": "c:\\Users\\user\\OneDrive\\Masaüstü\\Eticaret\\aviato\\Views\\Ürünler\\checkout.cshtml",
+      "TargetPath": "Views\\Ürünler\\checkout.cshtml",
       "FileKind": "mvc"
     },
     {
